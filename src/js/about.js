@@ -8,5 +8,5 @@ changeColorSheme();
 changeLang('about-project');
 showSlider();
 
-const aboutMenuTop = document.querySelector('.lng-about');
+const aboutMenuTop = document.querySelector('.lng-about-project');
 aboutMenuTop.classList.add('menu__link--active');
