@@ -1,6 +1,8 @@
-main {
+.todo {
   min-width: 320px;
   min-height: 90vh;
+  height: auto;
+  padding: 50px;
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   font-weight: 400;
@@ -9,10 +11,6 @@ main {
   background: url('../img/jpg/bg.jpg') center/cover, rgba(0, 0, 0, 0.4);
   background-blend-mode: multiply;
   transition: background-image 1s ease-in-out;
-}
-
-.todo {
-  padding: 50px;
 }
 
 .todo-title {

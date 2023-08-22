@@ -1,28 +1,28 @@
-import { langArr } from "./lang";
+import { langArr } from './lang';
 
- /**
+/**
  * Изменяет язык на странице
  *
  */
-function changeLang() {
-  let lang = 'en';
+function changeLang(page) {
+  let lang = 'ru';
   const allLang = ['en', 'ru'];
   const langList = langArr;
 
   const btnLang = document.querySelector('.lang-btn');
   const title = document.querySelector('title');
-    
-   /**
+
+  /**
    * Изменяет стилизацию кнопки выбора языка. Прописывает в адрес страницы хэш с указанием языка. Перезагружает страницу. Вызывается при нажатии на кнопку выбора языка
    *
    */
   function changeURLLanguageHandler() {
     if (!btnLang.classList.contains('lang-btn--active')) {
       btnLang.classList.add('lang-btn--active');
-      lang = 'ru';
+      lang = 'en';
     } else {
       btnLang.classList.remove('lang-btn--active');
-      lang = 'en';
+      lang = 'ru';
     }
 
     location.href = `${window.location.pathname}#${lang}`;
@@ -37,22 +37,25 @@ function changeLang() {
     let hash = window.location.hash;
     hash = hash.substr(1);
     if (!allLang.includes(hash)) {
-      location.href = `${window.location.pathname}#en`;
+      location.href = `${window.location.pathname}#ru`;
       location.reload();
     }
 
-    if (hash === 'ru') {
+    if (hash === 'en') {
       btnLang.classList.add('lang-btn--active');
     } else {
       btnLang.classList.remove('lang-btn--active');
     }
 
-    title.innerHTML = langList['unit'][hash];
+    title.innerHTML = langList[page][hash];
+
     for (let key in langList) {
-      let elem = document.querySelector(`.lng-${key}`);
-      if (elem) {
-        elem.innerHTML = langList[key][hash];
-      }
+      let elems = document.querySelectorAll(`.lng-${key}`);
+      elems.forEach((elem) => {
+        if (elem) {
+          elem.innerHTML = langList[key][hash];
+        }
+      });
     }
   }
 

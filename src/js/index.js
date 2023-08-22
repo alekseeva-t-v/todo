@@ -1,7 +1,9 @@
+import showBody from './modules/show-body';
 import changeLang from './modules/change-lang';
 import todoListShow from './modules/todo';
 
-changeLang();
+setTimeout(showBody, 0);
+changeLang('page-main');
 todoListShow();
 
 
