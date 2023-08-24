@@ -6,14 +6,22 @@ html,
 body {
   display: flex;
   flex-direction: column;
+  height: 100%;
+
   font-family: 'Wix Madefor Text', sans-serif;;
   letter-spacing: 0.5px;
+
   scroll-behavior: smooth;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
 .main {
-  min-height: 90vh;
-  height: auto;
+  flex-grow: 1;
   width: 100%;
   background-color: var(--page-bg);
 }
@@ -104,12 +112,6 @@ body {
   margin-bottom: 30px;
 
   background-color: var(--blue-bright);
-}
-
-@media (max-width: 1200px) {
-  .main {
-    height: auto;
-  }
 }
 
 @media (max-width: 992px) {
