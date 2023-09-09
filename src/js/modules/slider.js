@@ -1,10 +1,11 @@
+import { variables } from './variables';
+
 /**
  * Отвечает за работу слайдера. Периодическая смена слайдев. Управление с помощью кнопок-точек
  *
  */
 function showSlider() {
-  const slidesList = document.querySelectorAll('.about__slide');
-  const dotsList = document.querySelectorAll('.about__dot');
+  const { slidesList, dotsList } = variables;
 
   let index = 0;
 

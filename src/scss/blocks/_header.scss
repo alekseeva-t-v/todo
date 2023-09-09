@@ -170,6 +170,14 @@
   color: var(--blackpure);
 }
 
+.project-about .lang-btn {
+  display: none;
+}
+
+.project-content .light-mode-btn {
+  display: none;
+}
+
 @media (max-width: 992px) {
   .settings {
     order: 0;

@@ -1,11 +1,11 @@
+import { variables } from './variables';
+
 /**
  * Управляет формой для добавления новых задач, отвечает за вывод списка задач
  *
  */
 function todoListShow() {
-  const addTaskBtn = document.querySelector('#add-task-btn');
-  const deskTaskInput = document.querySelector('#description-task');
-  const todosWrapper = document.querySelector('.todos-wrapper');
+  const { addTaskBtn, deskTaskInput, todosWrapper } = variables;
 
   let tasks;
 

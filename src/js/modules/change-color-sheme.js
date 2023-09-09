@@ -1,11 +1,11 @@
+import { variables } from './variables';
+
 /**
  * Изменяет цветовую схему сайта
  *
  */
 function changeColorSheme() {
-  const btnDarkMode = document.querySelector('.light-mode-btn');
-  const main = document.querySelector('.main');
-
+  const {btnDarkMode, main} = variables
   /**
    * Активирует светлую тему
    *

@@ -1,5 +1,12 @@
+import { variables } from "./variables";
+
+/**
+ * Отвечает за плавное отображение страницы
+ *
+ */
 function showBody() {
-  const body = document.querySelector('body');
+  const {body} = variables
+
   body.classList.add('body_visible');
 }
 
